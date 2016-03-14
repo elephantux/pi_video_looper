@@ -76,7 +76,7 @@ class VideoLooper(object):
         # Set other static internal state.
         self._extensions = self._player.supported_extensions()
         self._small_font = pygame.font.Font(None, 50)
-        self._big_font   = pygame.font.Font(None, 250)
+        self._big_font   = pygame.font.Font(None, 350)
         self._running    = True
 
     def _print(self, message):
@@ -160,7 +160,7 @@ class VideoLooper(object):
             return
         # Draw message with number of movies loaded and animate countdown.
         # First render text that doesn't change and get static dimensions.
-        label1 = self._render_text(message + ' Starting playback in:')
+        label1 = self._render_text('')
         l1w, l1h = label1.get_size()
         sw, sh = self._screen.get_size()
         for i in range(seconds, 0, -1):
