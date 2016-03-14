@@ -75,7 +75,7 @@ class VideoLooper(object):
         self._blank_screen()
         # Set other static internal state.
         self._extensions = self._player.supported_extensions()
-        self._small_font = pygame.font.Font(None, 50)
+        self._small_font = pygame.font.Font(None, 150)
         self._big_font   = pygame.font.Font(None, 350)
         self._running    = True
 
